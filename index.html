@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Year - Semester 1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen centered layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* Logo Styling as Header Image */
+.logo {
+    width: 40vw; /* Reduced to 25% of viewport width */
+    height: auto;
+    margin-top: 2vh;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 4vw; /* Reduced to 4% of viewport width */
+    color: white;
+    margin: 3vh 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+h3{
+    width: 150px;
+    text-align: center;
+    font-size: 20px;
+    border:2px solid white;
+    margin: 10px;
+    background-color: white;
+    color: rgb(255, 0, 0);
+    border-radius: 30px; ;
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh; /* Reduced gap between buttons */
+}
+
+/* Button Styling */
+.button {
+    width: 30vw; /* Reduced width to 20% of viewport width */
+    padding: 2vh 0; /* Reduced padding relative to viewport height */
+    font-size: 2vw; /* Reduced font size relative to viewport width */
+    color: white;
+    background-color: #3498db;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2vw; /* Reduced rounded corners */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(15);
+        opacity: 0;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+    </style>
+</head>
+<body>
+    <!-- College Logo at the top as header image -->
+    <img src="https://www.facultyplus.com/wp-content/uploads/2024/11/logo-1.png" alt="College Logo" class="logo">
+    
+    <!-- Page Heading -->
+    <h1 id="page-title">2ND YEAR SEM1</h1>
+    
+    <!-- Buttons as Links with Animation -->
+    <div class="button-container">
+        <a href="OOPJ.HTML" class="button">OOPJ</a>
+        <a href="DBMS.HTML" class="button">DBMS</a>
+        <a href="DLCO.HTML" class="button">DLCO</a>
+        <a href="DMGT.HTML" class="button">DMGT</a>
+        <a href="UHV.HTML" class="button">UHV</a>
+    </div>
+    <h3>By Teja</h3>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
